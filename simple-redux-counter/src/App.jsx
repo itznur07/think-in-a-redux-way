@@ -1,8 +1,11 @@
+import Counter from "./components/Counter/Counter";
 
 function App() {
   return (
     <>
-      <h1>Hello React _ Redux</h1>
+      <div className="flex items-center justify-center h-screen">
+        <Counter></Counter>
+      </div>
     </>
   );
 }
