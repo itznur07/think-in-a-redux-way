@@ -1,6 +1,14 @@
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import rootReducer from "./rootReducer";
 
-const store = createStore(rootReducer);
+const myLogger = (store) => (next) => (action) => {
+  console.log("Action", JSON.stringify(action));
+
+
+
+  return next(action);
+};
+
+const store = createStore(rootReducer, applyMiddleware(myLogger));
 
 export default store;
