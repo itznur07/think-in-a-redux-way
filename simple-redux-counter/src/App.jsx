@@ -1,10 +1,12 @@
 import Counter from "./components/Counter/Counter";
+import DynamicCounter from "./components/DynamicCounter/DynamicCounter";
 
 function App() {
   return (
     <>
-      <div className="flex items-center justify-center h-screen">
+      <div className='flex flex-col gap-5 items-center justify-center h-screen'>
         <Counter></Counter>
+        <DynamicCounter></DynamicCounter>
       </div>
     </>
   );
